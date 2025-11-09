@@ -18,6 +18,8 @@ data:
       clientGroupsBlock:
         default:
           - ads
+    prometheus:
+      enable: true
     ports:
       dns: 53
       http: 4000
@@ -82,4 +84,3 @@ spec:
       port: 4000
       targetPort: 4000
       name: http
-

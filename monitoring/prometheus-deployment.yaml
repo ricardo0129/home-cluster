@@ -22,7 +22,7 @@ data:
       # Scrape Blocky metrics
       - job_name: "blocky"
         static_configs:
-          - targets: ["blocky-6db4769967-ttbt8.logging.pod.cluster.local:4000"]
+          - targets: ["10.43.223.155:4000"]
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -86,7 +86,7 @@ metadata:
   labels:
     app: prometheus
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   ports:
     - port: 9090
       targetPort: 9090
